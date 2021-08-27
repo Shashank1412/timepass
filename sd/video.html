@@ -1,0 +1,45 @@
+<!-- Write your HTML here -->
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .display{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 17%;
+    }
+  </style>
+</head>
+<body>
+<script type="text/javascript">
+  var count = 10;
+  var redirect = "/qrcode.html";
+
+  function countDown() {
+    var timer = document.getElementById("timer");
+    if (count > 0) {
+      count--;
+      // timer.innerHTML = "This page will redirect in " + count + " seconds.";
+      setTimeout("countDown()", 1000);
+    } else {
+      window.location.href = redirect;
+    }
+  }
+</script>
+
+<!-- <h2>There is a suprise from my side..Hope you like it....</h2> -->
+<br>
+
+<span id="timer">
+  <script type="text/javascript">countDown();</script>
+  <video width="320" height="240" controls class="display">
+    <source src="assets/video.mp4" type="video/mp4">
+    <!-- <source src="movie.ogg" type="video/ogg">
+    Your browser does not support the video tag. -->
+  </video>
+</span>
+  <!-- <h2>I mean it from all my heart.</h2> -->
+</body>
+
+</html>
